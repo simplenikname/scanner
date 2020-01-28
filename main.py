@@ -1,5 +1,6 @@
 from netaddr import *
 import threading
+import scanner_function
 
 class Schedule(threading.Thread):
     def __init__(self, ip_range):
@@ -8,4 +9,5 @@ class Schedule(threading.Thread):
 
     def run(self):
         from_ip, to_ip = self.raw_ip_range.split()
-        range = IPRange(from_ip, to_ip)
+        ip_range = IPRange(from_ip, to_ip)
+        scanner_function.scan(list(ip_range))
