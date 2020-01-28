@@ -1,12 +1,12 @@
-from socket import *
-import time 
+import socket
+import time
 
 def scan(ip_table):
-    for i in ip_table:
-        t_IP = gethostbyname(target)
+    for table in ip_table:
+        pass
 
         for i in range(50, 500):
-            s = socket(AF_INET, SOCK_STREAM)
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
             conn = s.connect((t_IP, i))
             if (conn == 0):
