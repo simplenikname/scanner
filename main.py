@@ -9,5 +9,5 @@ class Schedule(threading.Thread):
 
     def run(self):
         from_ip, to_ip = self.raw_ip_range.split()
-        ip_range = IPRange(from_ip, to_ip)
-        scanner_function.scan(list(ip_range))
+        print()
+        scanner_function.scan(list(IPRange(from_ip, to_ip)))
