@@ -1,14 +1,14 @@
 import socket
 import time
 
-def scan(ip_table):
+def scan(ip_table: list) -> None:
     for table in ip_table:
         pass
 
-        for i in range(50, 500):
+        for port in [80, 8000, 8080]:
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-            conn = s.connect((t_IP, i))
+            conn = s.connect((host, port))
             if (conn == 0):
                 print('Port %d: OPEN' % (i,))
             s.close()
