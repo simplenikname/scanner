@@ -26,7 +26,7 @@ def scan(ip_table: list) -> None:
                 print(f'{Fore.GREEN}[*]{Fore.RESET}The resource is available {host} : {port}')
             except Exception:
                 print(f'{Fore.RED}[!]{Fore.RESET} The resource is not available {host} : {port}')
-
+                pass
 
 
             s.close()
